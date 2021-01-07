@@ -213,11 +213,14 @@ body {
   fill: #B28451;
 }
 
-.home__like:focus {
-  outline: none;
+.home__like--liked {
   stroke: #c69963;
   stroke-width: 3px;
   fill: #101d2c;
+}
+
+.home__like--liked:hover {
+  fill: #39679c;
 }
 
 .home__name {

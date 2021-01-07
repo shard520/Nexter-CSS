@@ -34,11 +34,14 @@
 			fill: $color-primary-dark;
 		}
 
-		&:focus {
-			outline: none;
+		&--liked {
 			stroke: $color-primary;
 			stroke-width: 3px;
 			fill: $color-secondary;
+
+			&:hover {
+				fill: lighten($color: $color-secondary, $amount: 30%)
+			}
 		}
 	}
 
