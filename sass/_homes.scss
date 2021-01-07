@@ -40,7 +40,7 @@
 			fill: $color-secondary;
 
 			&:hover {
-				fill: lighten($color: $color-secondary, $amount: 30%)
+				fill: lighten($color: $color-secondary, $amount: 20%)
 			}
 		}
 	}
