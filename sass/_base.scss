@@ -34,6 +34,11 @@ body {
 	line-height: 1.6;
 }
 
+::selection {
+	background-color: $color-primary;
+	color: $color-grey-light-1;
+}
+
 .container {
 	display: grid;
 	grid-template-rows: 80vh min-content 40vw repeat(3, min-content);

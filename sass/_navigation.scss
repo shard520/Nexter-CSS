@@ -1,0 +1,172 @@
+.navigation {
+	background-color: $color-primary;
+	grid-column: sidebar-start / sidebar-end;
+	grid-row: 1 / -1;
+	display: flex;
+	flex-direction: column;
+	z-index: 1000;
+
+	&__checkbox {
+		width: 0;
+		height: 0;
+		visibility: hidden;
+	}
+
+	&__checkbox:checked + &__menu {
+		transform: translateX(0);
+	}
+
+	&__checkbox:checked ~ &__overlay {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__button{
+		width: 4.5rem;
+		height: 3.3rem;
+		position: sticky;
+		top: 1.5rem;
+		cursor: pointer;
+		display: block;
+		align-self: center;
+		z-index: 1001;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__icon {
+		border: none;
+		border-radius: 0;
+		background-color: #fff;
+		height: 2px;
+		width: 4.5rem;
+		position: absolute;
+		top: 1.5rem;
+		line-height: normal;
+		transition: all .3s;
+	
+		&::before,
+		&::after {
+			background-color: #fff;
+			height: 2px;
+			width: 4.5rem;
+			content: "";
+			display: block;
+			position: absolute;
+			transition: all .3s;
+		}
+	
+		&::before { transform: translateY(-1.5rem); }
+		
+		&:focus {
+			outline: none;
+		}
+
+	}
+
+	&__button:hover &__icon,
+	&__button:focus &__icon,
+	&__button:hover &__icon::before,
+	&__button:focus  &__icon::before,
+	&__button:hover &__icon::after,
+	&__button:focus  &__icon::after  { 
+		background-color: $color-secondary; 
+	}
+
+	&__checkbox:checked ~ &__button &__icon { background-color: transparent; }
+
+	&__checkbox:checked ~ &__button &__icon::before { 
+		top: 0;
+		transform: rotate(135deg); 
+	}
+
+	&__checkbox:checked ~ &__button &__icon::after { 
+		top: 0;
+		transform: rotate(-135deg); 
+	}
+
+	&__menu {
+		height: 100vh;
+		width: 16rem;
+		background-color: $color-primary;
+		position: fixed;
+		top: 0;
+		transform: translateX(-100%);
+		transition: all .3s ease-out;
+		z-index: 1000;
+	}
+
+	&__links {
+		margin-top: 8rem;
+		font-size: 1.7rem;
+	}
+
+	&__item {
+		list-style: none;
+		margin: 2rem;
+		margin-left: 1.75rem;
+	}
+
+	&__link {
+		position: relative;
+
+		&:link {
+			color: $color-grey-light-1;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-family: $font-display;
+			transition: all .2s;
+		}
+
+		&:visited {
+			color: $color-grey-light-1;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			height: 2px;
+			width: 1px;
+			position: absolute;
+			bottom: -.5rem;
+			background-color: $color-grey-light-1;
+			opacity: 0;
+			transition: opacity .1s,
+						width .3s ease-out;
+		}
+
+		&:hover,
+		&:focus {
+			&::after {
+				opacity: 1;
+				width: 100%;
+			}
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__overlay {
+		position: fixed;
+		background-color: rgba(#000, .8);
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s;
+		cursor: pointer;
+
+		@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+			-webkit-backdrop-filter: blur(10px);
+			backdrop-filter: blur(10px);
+			background-color: rgba(#000, .3);
+		}
+	}
+}

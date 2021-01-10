@@ -12,11 +12,26 @@
         <title>nexter &mdash; your home, your freedom</title>
     </head>
     <body class="container">
-        <div class="sidebar">
-            <button class="nav-btn"></button>
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <nav class="navigation__menu">
+                <ul class="navigation__links">
+                    <li class="navigation__item"><a href="#header" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#features" class="navigation__link">Our Promise</a></li>
+                    <li class="navigation__item"><a href="#story" class="navigation__link">Testimonials</a></li>
+                    <li class="navigation__item"><a href="#homes" class="navigation__link">Our Homes</a></li>
+                    <li class="navigation__item"><a href="#gallery" class="navigation__link">Gallery</a></li>
+                    <li class="navigation__item"><a href="#footer" class="navigation__link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="navigation__overlay">&nbsp;</div>
+            <label for="navi-toggle" class="navigation__button" tabindex="1">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            
         </div>
 
-        <header class="header">
+        <header class="header" id="header">
             Header
         </header>
 
@@ -24,7 +39,7 @@
             Top 3 realtors
         </div>
 
-        <section class="features">
+        <section class="features" id="features">
             <div class="feature">
                 <svg class="feature__icon">
                     <use xlink:href="./img/sprite.svg#icon-global"></use>
@@ -86,7 +101,7 @@
             </div>
         </section>
 
-        <div class="story__pictures">
+        <div class="story__pictures" id="story">
             <img src="./img/story-1.jpeg" alt="Couple with new house" class="story__img--1">
             <img src="./img/story-2.jpeg" alt="New house" class="story__img--2">
         </div>
@@ -100,7 +115,7 @@
             <button class="btn">Find your own home</button>
         </div>
 
-        <section class="homes">
+        <section class="homes" id="homes">
             <div class="home">
                 <img src="./img/house-1.jpeg" alt="House 1" class="home__img">
                 <svg class="home__like">
@@ -300,7 +315,7 @@
             </div>
         </section>
 
-        <section class="gallery">
+        <section class="gallery" id="gallery">
             <figure class="gallery__item gallery__item--1">
                 <img src="./img/gal-1.jpeg" alt="Gallery image 1" class="gallery__img">
             </figure>
@@ -359,22 +374,23 @@
             
         </section>
 
-        <footer class="footer">
-            <ul class="nav">
-                <li class="nav__item"><a href="#" class="nav__link">Find your dream home</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Request proposal</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Download home planner</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Contact us</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Submit your property</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Come work with us!</a></li>
+        <footer class="footer" id="footer">
+            <ul class="footer-nav">
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Find your dream home</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Request proposal</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Download home planner</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Contact us</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Submit your property</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Come work with us!</a></li>
             </ul>
 
             <p class="copyright">
-                Built by <a href="https://www.github.com/shard520" class="copyright__link" target="_blank">Simon Hardacre</a>. 
+                Built by <a href="https://www.github.com/shard520/Nexter-CSS" class="copyright__link" target="_blank">Simon Hardacre</a>. 
                 <br>Design copyright &copy; <a href="https://twitter.com/jonasschmedtman" class="copyright__link" target="_blank">Jonas Schmedtmann</a>.
             </p>
         </footer>
     </body>
 
+    <script src="./js/nav.js"></script>
     <script src="./js/likeToggle.js"></script>
 </html>
