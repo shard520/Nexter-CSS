@@ -3,19 +3,8 @@
   "version": "1.0.0",
   "description": "Nexter Webpage - Advanced CSS Course Project 3 (Grid)",
   "main": "index.js",
-  "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/main.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/main.comp.css -o css/main.prefix.css",
-    "compress:css": "node-sass css/main.prefix.css css/main.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
-  },
+  "scripts": {},
   "author": "shard520",
   "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^10.1.0",
-    "node-sass": "^5.0.0",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.2.2",
-    "postcss-cli": "^8.3.1"
-  }
+  "devDependencies": {}
 }
