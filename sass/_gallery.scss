@@ -7,9 +7,21 @@
 	gap: 1.5rem;
 	padding: 1.5rem;
 
+	@media only screen and (max-width: $bp-small) {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(12, 7vw);
+	}
+
 	&__item {
+
 		&--1 {
 			grid-area: 1 / 1 / span 2 / span 2;
+
+			@media only screen and (max-width: $bp-small) {
+				& > img {
+					object-position: bottom;
+				}
+			}
 		}
 
 		&--2 {
@@ -18,10 +30,18 @@
 
 		&--3 {
 			grid-area: 1 / 6 / span 2 / span 1;
+
+			@media only screen and (max-width: $bp-small) {
+				grid-area: 8 / 3 / span 2 / span 1;
+			}
 		}
 
 		&--4 {
 			grid-area: 1 / 7 / span 2 / span 2;
+
+			@media only screen and (max-width: $bp-small) {
+				grid-area: 8 / 1 / span 2 / span 2;
+			}
 		}
 
 		&--5 {
@@ -34,14 +54,26 @@
 
 		&--7 {
 			grid-area: 4 / 5 / span 1 / span 1;
+
+			@media only screen and (max-width: $bp-small) {
+				grid-area: 4 / 5 / span 2 / span 1;
+			}
 		}
 
 		&--8 {
 			grid-area: 3 / 6 / span 2 / span 2;
+
+			@media only screen and (max-width: $bp-small) {
+				grid-area: 11 / 4 / span 2 / span 2;
+			}
 		}
 
 		&--9 {
 			grid-area: 3 / 8 / span 3 / span 1;
+
+			@media only screen and (max-width: $bp-small) {
+				grid-area: 6 / 4 / span 5 / span 1;
+			}
 		}
 
 		&--10 {
@@ -54,14 +86,26 @@
 
 		&--12 {
 			grid-area: 6 / 4 / span 2 / span 1;
+
+			@media only screen and (max-width: $bp-small) {
+				grid-area: 6 / 5 / span 2 / span 1;
+			}
 		}
 
 		&--13 {
 			grid-area: 5 / 5 / span 3 / span 3;
+
+			@media only screen and (max-width: $bp-small) {
+				grid-area: 10 / 1 / span 3 / span 3;
+			}
 		}
 
 		&--14 {
 			grid-area: 6 / 8 / span 2 / span 1;
+
+			@media only screen and (max-width: $bp-small) {
+				grid-area: 8 / 5 / span 3 / span 1;
+			}
 		}
 	}
 
