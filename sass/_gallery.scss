@@ -32,7 +32,7 @@
 			grid-area: 1 / 6 / span 2 / span 1;
 
 			@media only screen and (max-width: $bp-small) {
-				grid-area: 8 / 3 / span 2 / span 1;
+				grid-area: 8 / 5 / span 3 / span 1;
 			}
 		}
 
@@ -56,7 +56,7 @@
 			grid-area: 4 / 5 / span 1 / span 1;
 
 			@media only screen and (max-width: $bp-small) {
-				grid-area: 4 / 5 / span 2 / span 1;
+				grid-area: 9 / 4 / span 2 / span 1;
 			}
 		}
 
@@ -72,7 +72,7 @@
 			grid-area: 3 / 8 / span 3 / span 1;
 
 			@media only screen and (max-width: $bp-small) {
-				grid-area: 6 / 4 / span 5 / span 1;
+				grid-area: 4 / 5 / span 4 / span 1;
 			}
 		}
 
@@ -88,7 +88,7 @@
 			grid-area: 6 / 4 / span 2 / span 1;
 
 			@media only screen and (max-width: $bp-small) {
-				grid-area: 6 / 5 / span 2 / span 1;
+				grid-area: 8 / 3 / span 2 / span 1;
 			}
 		}
 
@@ -104,7 +104,7 @@
 			grid-area: 6 / 8 / span 2 / span 1;
 
 			@media only screen and (max-width: $bp-small) {
-				grid-area: 8 / 5 / span 3 / span 1;
+				grid-area: 6 / 4 / span 3 / span 1;
 			}
 		}
 	}
